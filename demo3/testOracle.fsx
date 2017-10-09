@@ -47,7 +47,7 @@ Check.Verbose ``Performance improved should have same result as original``
 
 let config = {
     Config.Verbose with 
-        EndSize = 1000
+        EndSize = 5000
         MaxTest = 5
     }
 
