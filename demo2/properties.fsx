@@ -1,7 +1,7 @@
 #I "../packages/FsCheck/lib/net452/"
 #r "FsCheck.dll"
 
-#I "thereandback/thereandback/bin/debug/"
+#I "thereandback/bin/debug/"
 #r "ThereAndBack.dll"
 
 open FsCheck
@@ -20,17 +20,9 @@ Check.Quick ``Check There And Back of DateTime Encryption``
 
 
 
-
-
-
-
-
-
-
-let encryptDecrypt = encryption.EncryptStringToBytes_Aes >> encryption.DecryptStringFromBytes_Aes
-
 let checkThereAndBackStrings (NonEmptyString input) =
-  input = (input |> encryptDecrypt)
+  input = (input |> encryption.EncryptStringToBytes_Aes 
+            |> encryption.DecryptStringFromBytes_Aes)
 
 
 Check.Quick checkThereAndBackStrings
