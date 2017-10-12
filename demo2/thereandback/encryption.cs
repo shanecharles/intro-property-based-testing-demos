@@ -8,11 +8,10 @@ namespace ThereAndBack
     // https://msdn.microsoft.com/en-us/library/system.security.cryptography.aescryptoserviceprovider(v=vs.110).aspx?cs-save-lang=1&cs-lang=csharp#code-snippet-1
     public class Encryption
     {
-        private readonly byte[] Key = new byte[] { 166, 223, 32, 223, 183, 112, 196, 122, 92, 3, 131,
-            253, 83, 176, 42, 143, 41, 11, 233, 36, 4, 90, 18,
-            190, 23, 245, 145, 29, 217, 33, 46, 181 };
-        private readonly byte[] Iv = new byte[] { 145, 114, 250, 234, 168, 185, 121, 156, 187, 105,
-           254, 158, 164, 170, 163, 75 };
+        private readonly byte[] Key = new byte[] { 1, 2, 3, 4, 5, 1, 2, 3, 4, 5,
+            1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2 };
+        private readonly byte[] Iv = new byte[] { 1, 2, 3, 4, 5, 1, 2, 3, 4, 5,
+            1, 2, 3, 4, 5, 1 };
         
         public byte[] EncryptStringToBytes_Aes(string plainText)
         {

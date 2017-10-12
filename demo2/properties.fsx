@@ -20,9 +20,9 @@ Check.Quick ``Check There And Back of DateTime Encryption``
 
 
 
-let checkThereAndBackStrings (NonEmptyString input) =
+let ``Check There And Back Strings`` (NonEmptyString input) =
   input = (input |> encryption.EncryptStringToBytes_Aes 
             |> encryption.DecryptStringFromBytes_Aes)
 
 
-Check.Quick checkThereAndBackStrings
+Check.Quick ``Check There And Back Strings``

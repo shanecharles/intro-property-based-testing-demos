@@ -11,7 +11,7 @@ prop_AddIsCommutative x y =
 
 prop_AddIsAssociative :: (Int, Int, Int) -> Bool
 prop_AddIsAssociative (x, y, z) =
-  (x +  y) + z == x + (y + z)
+  (x + y) + z == x + (y + z)
 
   
 prop_SumOfTwoNumbersIsGreaterThanOrEqualToXorY :: (Int, Int) -> Bool

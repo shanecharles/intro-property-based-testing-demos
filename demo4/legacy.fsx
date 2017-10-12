@@ -15,7 +15,7 @@ let ``Awarding money should not contain a zero`` (xs : int list) =
 
 let config = { 
     Config.Quick with
-        EndSize = 5000
+        EndSize = 10000
     }
 
 Check.One("Contain No Zeroes", config, ``Awarding money should not contain a zero``)
