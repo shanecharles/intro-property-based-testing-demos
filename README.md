@@ -9,4 +9,6 @@ Run the demo through `stack repl`.
     stack repl
     main
 
+    :q // quit the REPL
+
 
